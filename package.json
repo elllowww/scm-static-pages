@@ -1,0 +1,12 @@
+{
+  "name": "scm-static-pages",
+  "version": "1.0.0",
+  "description": "Static web page demonstrating SCM and CI/CD with automated ESLint and GitHub Pages deployment",
+  "main": "script.js",
+  "scripts": {
+    "lint": "eslint script.js"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.1"
+  }
+}

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SCM &amp; CI/CD Automated Deployment</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page-wrapper">
+    <header class="header">
+      <div class="container">
+        <div class="brand">
+          <span class="brand-icon" aria-hidden="true">🚀</span>
+          <span class="brand-text">SCM &amp; CI/CD Lab</span>
+        </div>
+        <nav class="nav-links">
+          <a href="#about-scm">SCM Fundamentals</a>
+          <a href="#cicd-pipeline">CI/CD Pipeline</a>
+          <a href="#interactive-demo">Live Demo</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <section class="hero-section">
+        <div class="container">
+          <span class="hero-tag">Automated Software Delivery</span>
+          <h1 class="hero-title">Software Configuration Management &amp; CI/CD</h1>
+          <p class="hero-description">
+            A static web application demonstrating automated quality assurance with ESLint, 
+            version-controlled change tracking, and zero-touch deployment using GitHub Actions and GitHub Pages.
+          </p>
+        </div>
+      </section>
+
+      <section id="about-scm" class="section">
+        <div class="container">
+          <h2 class="section-title">Software Configuration Management (SCM)</h2>
+          <p class="section-intro">
+            SCM is the discipline of managing and controlling changes in software artifacts throughout the product lifecycle.
+          </p>
+          <div class="cards-grid">
+            <article class="card">
+              <div class="card-icon" aria-hidden="true">🌿</div>
+              <h3>Version Control &amp; Baselines</h3>
+              <p>
+                Every commit forms an immutable baseline in Git, ensuring traceability, atomic commits, and team collaboration across feature branches.
+              </p>
+            </article>
+
+            <article class="card">
+              <div class="card-icon" aria-hidden="true">🔍</div>
+              <h3>Change Control &amp; Auditing</h3>
+              <p>
+                Pull requests and automated quality gates guarantee that only reviewed, compliant code reaches the production branch.
+              </p>
+            </article>
+
+            <article class="card">
+              <div class="card-icon" aria-hidden="true">📦</div>
+              <h3>Configuration &amp; Reproducibility</h3>
+              <p>
+                Dependencies, linting rules, and build configurations are strictly version-controlled, allowing identical builds anywhere.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="cicd-pipeline" class="section section-alternate">
+        <div class="container">
+          <h2 class="section-title">Continuous Integration &amp; Continuous Deployment</h2>
+          <p class="section-intro">
+            Automating the bridge between code commit and live production deployment.
+          </p>
+
+          <div class="pipeline-steps">
+            <div class="pipeline-step">
+              <div class="step-number">1</div>
+              <div class="step-content">
+                <h3>Push to Main</h3>
+                <p>Code changes pushed to the primary repository trigger GitHub Actions automatically.</p>
+              </div>
+            </div>
+
+            <div class="pipeline-arrow" aria-hidden="true">➜</div>
+
+            <div class="pipeline-step">
+              <div class="step-number">2</div>
+              <div class="step-content">
+                <h3>ESLint Quality Gate</h3>
+                <p>Automated static analysis checks syntax and enforces semicolon rules before approving the build.</p>
+              </div>
+            </div>
+
+            <div class="pipeline-arrow" aria-hidden="true">➜</div>
+
+            <div class="pipeline-step">
+              <div class="step-number">3</div>
+              <div class="step-content">
+                <h3>GitHub Pages Deploy</h3>
+                <p>Upon lint success, artifacts are securely packaged and published to GitHub Pages.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="interactive-demo" class="section">
+        <div class="container">
+          <div class="demo-card">
+            <div class="demo-card-header">
+              <h2>Interactive Pipeline Status Monitor</h2>
+              <p>Click the button below to cycle through simulated stages of the CI/CD pipeline.</p>
+            </div>
+
+            <div class="demo-status-panel">
+              <div class="status-indicator-row">
+                <span class="status-label">Current Pipeline State:</span>
+                <span id="status-badge" class="status-badge badge-neutral">CI/CD Idle</span>
+              </div>
+              <div class="status-box">
+                <p id="status-message">SCM pipeline is standing by. Ready for the next commit to the main branch.</p>
+              </div>
+            </div>
+
+            <div class="demo-actions">
+              <button id="status-btn" class="btn btn-primary" type="button">Check Next Pipeline State</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>Software Configuration Management &bull; GitHub Actions &bull; ESLint &bull; GitHub Pages</p>
+      </div>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
