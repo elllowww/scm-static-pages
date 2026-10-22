@@ -23,12 +23,12 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Setup Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: 20
 
       - name: Run JS Linter
-        run: npx --yes eslint script.js
+        run: npx --yes eslint@8.57.0 script.js
 
   deploy:
     needs: lint
