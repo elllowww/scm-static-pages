@@ -27,11 +27,8 @@ jobs:
         with:
           node-version: 20
 
-      - name: Install Dependencies
-        run: npm ci
-
       - name: Run JS Linter
-        run: npm run lint
+        run: npx --yes eslint script.js
 
   deploy:
     needs: lint
