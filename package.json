@@ -4,9 +4,11 @@
   "description": "Static web page demonstrating SCM and CI/CD with automated ESLint and GitHub Pages deployment",
   "main": "script.js",
   "scripts": {
-    "lint": "eslint script.js"
+    "lint": "eslint script.js",
+    "test": "jest"
   },
   "devDependencies": {
-    "eslint": "^8.57.1"
+    "eslint": "^8.57.1",
+    "jest": "^29.7.0"
   }
 }
