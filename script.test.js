@@ -2,7 +2,7 @@ const { generateGreeting } = require("./script");
 
 describe("generateGreeting", () => {
   test("greets the provided name", () => {
-    expect(generateGreeting("Ada")).toBe("Wrong Greeting!");
+    expect(generateGreeting("Ada")).toBe("Hello, Ada!");
   });
 
   test("includes the full provided name", () => {
